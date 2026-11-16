@@ -5,7 +5,7 @@ Blur generation pipeline.
 Usage:
     python blur_pipeline.py 51
     python blur_pipeline.py 51 --trajectories diagonal sine
-    python blur_pipeline.py 101 -t horizontal vertical --input-dir ./corrected_Y_ini_Y_final
+    python blur_pipeline.py 101 -t horizontal vertical --input-dir ./corrected_grid
 
 For each requested trajectory:
     1. Takes the N central images of the trajectory (the excess is discarded
@@ -38,11 +38,11 @@ from tqdm import tqdm
 # ----------------------------------------------------------------------------
 # CONFIGURATION
 # ----------------------------------------------------------------------------
-INPUT_DIR_DEFAULT = "./corrected_Y_ini_Y_final"
+INPUT_DIR_DEFAULT = "./corrected_grid"
 OUTPUT_DIR_DEFAULT = "./blur_results"
 
 # Ground truth image and output folder
-GT_IMAGE_DEFAULT = "./corrected_Y_ini_Y_final/X450_Y1000.jpg"
+GT_IMAGE_DEFAULT = "./corrected_grid/X450_Y1000.jpg"
 GT_DIR_DEFAULT = "./gt"
 
 # Camera grid
